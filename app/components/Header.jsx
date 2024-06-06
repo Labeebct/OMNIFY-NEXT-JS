@@ -7,7 +7,7 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload';
 
 const Header = () => {
   return (
-    <div className="w-full p-6">
+    <div className="w-full p-5 pb-2">
       <h3 className="font-bold tracking-wider text-[1.1rem]">Waitlist</h3>
 
       {/* DASH IFO */}
