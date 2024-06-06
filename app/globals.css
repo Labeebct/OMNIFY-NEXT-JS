@@ -2,3 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide the default placeholder text in date inputs */
+.date-input::-webkit-datetime-edit-fields-wrapper {
+  display: none;
+}
+
+.date-input::-webkit-inner-spin-button,
+.date-input::-webkit-calendar-picker-indicator {
+  display: block; /* To make sure the calendar icon is still visible */
+}
+
+.date-input::-webkit-datetime-edit {
+  color: transparent; /* Make the text transparent */
+}
+
+.date-input:focus::-webkit-datetime-edit {
+  color: black; /* Revert the text color on focus */
+}
+
+
