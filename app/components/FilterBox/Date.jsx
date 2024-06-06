@@ -2,6 +2,7 @@ import React from "react";
 import SelectBar from "../SelectBar";
 
 const Date = () => {
+  //Date of dates containg label and value for select options
   const datesDatas = [
     { value: "All", label: "All" },
     { value: "Custom", label: "Custom" },
@@ -17,6 +18,8 @@ const Date = () => {
   return (
     <div className="w-full h-full p-4 ">
       <p className="text-[.85rem] mb-3 font-medium">Show Orders for</p>
+      
+      {/* calling selectbar component */}
       <SelectBar name={"showOnDate"} options={datesDatas} placeholder={"All"} />
       <div className="flex justify-between my-4">
         <div>

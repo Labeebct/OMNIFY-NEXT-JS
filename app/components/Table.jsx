@@ -58,6 +58,7 @@ const Table = ({ tableData }) => {
         </tr>
       </thead>
       <tbody>
+        {/* //Mapping td datas */}
         {tableData.map((data, index) => (
           <tr key={index} className="border">
             <th>
@@ -70,6 +71,7 @@ const Table = ({ tableData }) => {
               {data.payer}
             </td>
             <td className="font-light text-[.65rem] p-3 border">
+              {/* //Status component for change color according to colors */}
               <DataStatus status={data.status} />
             </td>
             <td className="font-light text-[.65rem] p-3 border">

@@ -8,6 +8,8 @@ const SelectBar = ({
   placeholder,
   selectedOption,
 }) => {
+
+  //Custumising the style
   const customStyles = {
     menu: (provided) => ({
       ...provided,

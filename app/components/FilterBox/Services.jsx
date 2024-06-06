@@ -3,8 +3,10 @@ import SearchBar from "../SearchBar";
 import SelectBar from "../SelectBar";
 
 const Services = () => {
+  //Keeping state for shifting search by name to search by tag
   const [selectSec, setSelected] = useState("searchByName");
 
+  //Data of service for select options
   const serviceDatas = [
     { value: "Show all service type", label: "Show all service type" },
     { value: "Class", label: "Class" },
@@ -15,6 +17,7 @@ const Services = () => {
     { value: "General items", label: "General items" },
   ];
 
+  //Data of status for select options
   const statusDatas = [
     { value: "Show All", label: "Show All" },
     { value: "Public", label: "Public" },
@@ -31,6 +34,7 @@ const Services = () => {
             type="radio"
             name="filter"
             defaultChecked
+            //Onclick shifting the part component
             onClick={() => setSelected("searchByName")}
             className="accent-black cursor-pointer"
             id="searchByName"
@@ -46,6 +50,7 @@ const Services = () => {
           <input
             type="radio"
             name="filter"
+            //Onclick shifting the part component
             onClick={() => setSelected("searchByTag")}
             className="accent-black cursor-pointer"
             id="searchByTags"
@@ -59,6 +64,7 @@ const Services = () => {
         </div>
       </div>
 
+      {/* checking the current stage and showing selected part */}
       {selectSec === "searchByName" ? (
         <div>
           <SearchBar placeHolder={"Search service name"} />
@@ -117,9 +123,19 @@ const Services = () => {
       ) : (
         <div className="w-full h-auto">
           <p className="text-[.85rem] mb-3 font-medium my-3">Service type</p>
-          <SelectBar name={"serviceType"} options={serviceDatas}  placeholder={'Show all service type'} />
+          {/* Calling select bar */}
+          <SelectBar
+            name={"serviceType"}
+            options={serviceDatas}
+            placeholder={"Show all service type"}
+          />
           <p className="text-[.85rem] mb-3 font-medium my-3">Service type</p>
-          <SelectBar name={"status"} options={statusDatas} placeholder={'Show All'} />
+          {/* Calling select bar */}
+          <SelectBar
+            name={"status"}
+            options={statusDatas}
+            placeholder={"Show All"}
+          />
         </div>
       )}
     </div>

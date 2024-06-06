@@ -2,6 +2,7 @@ import React from "react";
 import CircleIcon from "@mui/icons-material/Circle";
 
 const DataStatus = ({ status }) => {
+  //Function which returing bg according to current status
   const statusBg = () => {
     switch (status) {
       case "Active":
@@ -15,6 +16,7 @@ const DataStatus = ({ status }) => {
     }
   };
 
+  //Function which returing color according to current status
   const statusColor = () => {
     switch (status) {
       case "Active":
@@ -30,6 +32,7 @@ const DataStatus = ({ status }) => {
 
   return (
     <div
+      // Calling function to get the bg
       className={`${statusBg()} p-2 rounded-2xl w-20 flex items-center gap-1 font-semibold`}
     >
       <span>

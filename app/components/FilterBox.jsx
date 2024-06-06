@@ -10,10 +10,13 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import Services from "./FilterBox/Services";
 
 const FilterBox = ({ filterBox, setFilterBox }) => {
+  //Returing null if modal is not triggered
   if (!filterBox) return null;
 
+  //Keeping state for changing the right side of the filter box component
   const [currentComp, setCurrentComp] = useState("Scheduled Date");
 
+  //Function to track the current component selected
   const handleComponent = (comp) => {
     switch (comp) {
       case "Scheduled Date":
@@ -45,6 +48,7 @@ const FilterBox = ({ filterBox, setFilterBox }) => {
     <div className="absolute duration-300 left-4  ease-in-out mt-[.95rem]  rounded-md   w-[55.9%] min-w-[290px] h-[433px] bg-white border">
       <div className="w-full flex border-b h-[87%]">
         <div className="flex-1 max-w-[250px] min-w-[55px] flex-shrink overflow-hidden bg-slate-100 border-r">
+          {/* Looping the li of the left of the filterbox component */}
           <SidebarIconLi
             handleComponent={handleComponent}
             currentComp={currentComp}
@@ -52,6 +56,7 @@ const FilterBox = ({ filterBox, setFilterBox }) => {
           />
         </div>
         <div className="flex-1 overflow-x-auto min-w-[300px] bg-white border">
+          {/* Rendering according to selected */}
           {currentComp === "Scheduled Date" ? (
             <Date />
           ) : currentComp === "People" ? (
@@ -64,12 +69,14 @@ const FilterBox = ({ filterBox, setFilterBox }) => {
       <div className="flex justify-end w-full h-[13%] px-2">
         <div className="flex items-center gap-2">
           <button
+            //Closing the modal a applying changes
             onClick={() => setFilterBox(false)}
             className="text-[.8rem] p-2 border cursor-pointer active:scale-[.95] duration-300 ease-in-out"
           >
             Reset to Default
           </button>
           <button
+            //Closing the modal a applying changes
             onClick={() => setFilterBox(false)}
             className="text-[.8rem] p-2 border bg-[black] text-white w-24 rounded-sm cursor-pointer active:scale-[.95] duration-300 ease-in-out "
           >

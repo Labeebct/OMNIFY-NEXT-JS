@@ -4,6 +4,7 @@ const SidebarIconLi = ({ sidNavLi, handleComponent ,currentComp}) => {
       {sidNavLi.map((data) => (
         <li
           key={data.id}
+          //For filter box
           onClick={() => handleComponent && handleComponent(data.navHead)}
           className={`flex hover:bg-slate-200 px-2 min-w-8 ${currentComp == data.navHead && 'bg-slate-200' } rounded-sm cursor-pointer gap-3 h-12 items-center`}
         >

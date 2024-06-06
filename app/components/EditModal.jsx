@@ -2,6 +2,7 @@ import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
 const EditModal = ({ editModalOpen, setEditModalOpen }) => {
+  //inputs for looping
   const editColoumDatas = [
     "Order Created On",
     "Payer",
@@ -12,6 +13,7 @@ const EditModal = ({ editModalOpen, setEditModalOpen }) => {
     "Scheduled",
   ];
 
+  //Returing null if modal is closed
   if (!editModalOpen) return null;
   return (
     <div className="absolute duration-300 right-4  ease-in-out mt-[.95rem]  rounded-md  p-3 w-[30%] min-w-[290px] h-[432px] bg-white border">
@@ -19,6 +21,7 @@ const EditModal = ({ editModalOpen, setEditModalOpen }) => {
         <h3 className="font-semibold my-1 text-[#000000dc]">Edit Columns</h3>
         <div
           className="cursor-pointer active:scale-[.9] duration-200 ease-in"
+          //For closing the modal
           onClick={() => setEditModalOpen(false)}
         >
           <CloseIcon />

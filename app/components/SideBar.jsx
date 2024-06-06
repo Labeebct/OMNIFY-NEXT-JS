@@ -19,8 +19,11 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 
 const SideBar = () => {
+
+  //State for shortening and widening of the navbar
   const [hideNav, setHideNav] = useState(true);
 
+  //Side li
   const sidNavLi = [
     {
       id: 1,
@@ -32,6 +35,7 @@ const SideBar = () => {
     { id: 4, icon: HourglassEmptyIcon, navHead: "Waitlist" },
   ];
 
+  //Useeffect for resizing the navbar according to screen width
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1300) {
@@ -83,7 +87,7 @@ const SideBar = () => {
           {!hideNav && (
             <h3 className="text-[.9rem] whitespace-nowrap">Location Name</h3>
           )}
-          <div className={`flex ${hideNav ? "ml-[.49rem]" : "ml-0"} flex-col`}>
+          <div className={`flex ${hideNav ? "ml-[.4rem]" : "ml-0"} flex-col`}>
             <EastIcon sx={{ fontSize: ".9rem" }} />
             <WestIcon
               sx={{ fontSize: ".9rem" }}
@@ -108,7 +112,7 @@ const SideBar = () => {
               </div>
             </div>
           ) : (
-            <div className="ml-[.49rem]">
+            <div className="ml-[.4rem]">
               <LanguageIcon sx={{ fontSize: "1.2rem" }} />
             </div>
           )}
