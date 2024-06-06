@@ -51,7 +51,7 @@ const SideBar = () => {
 
   return (
     <main
-      className={`flex flex-col flex-shrink-0 p-1 border transition-transform justify-between duration-500 ease-in-out h-full ${
+      className={`flex flex-col flex-shrink-0 p-1 border  justify-between duration-500 ease-in-out h-full ${
         hideNav ? "w-[3.3rem]" : "w-[270px]"
       } overflow-hidden bg-slate-100`}
     >
@@ -83,7 +83,7 @@ const SideBar = () => {
           {!hideNav && (
             <h3 className="text-[.9rem] whitespace-nowrap">Location Name</h3>
           )}
-          <div className={`flex ${hideNav ? "ml-1" : "ml-0"} flex-col`}>
+          <div className={`flex ${hideNav ? "ml-[.49rem]" : "ml-0"} flex-col`}>
             <EastIcon sx={{ fontSize: ".9rem" }} />
             <WestIcon
               sx={{ fontSize: ".9rem" }}
@@ -108,7 +108,7 @@ const SideBar = () => {
               </div>
             </div>
           ) : (
-            <div className="ml-1">
+            <div className="ml-[.49rem]">
               <LanguageIcon sx={{ fontSize: "1.2rem" }} />
             </div>
           )}
