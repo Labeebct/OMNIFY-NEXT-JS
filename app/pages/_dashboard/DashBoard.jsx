@@ -81,7 +81,7 @@ const DashBoard = () => {
     }, 2500);
 
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, []);     
 
   if (isLoading) {
     return <Loading />;
@@ -97,7 +97,7 @@ const DashBoard = () => {
             <div className="w-full h-auto  overflow-x-auto">
               <Table tableData={tableData} />
             </div>
-            <TableFooter />
+            <TableFooter />   
           </div>
         </div>
       </div>
