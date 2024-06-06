@@ -51,9 +51,9 @@ const SideBar = () => {
 
   return (
     <main
-      className={`flex flex-col flex-shrink-0 justify-between duration-500 ease-in-out h-full ${
-        hideNav ? "w-[3.3rem]" : "w-[260px]"
-      } overflow-hidden bg-slate-200`}
+      className={`flex flex-col flex-shrink-0 p-1 border-r justify-between duration-500 ease-in-out h-full ${
+        hideNav ? "w-[3.3rem]" : "w-[270px]"
+      } overflow-hidden bg-slate-100`}
     >
       <div>
         {/* FRONT-DESK */}
@@ -94,15 +94,15 @@ const SideBar = () => {
         {/* TIME DATE */}
         <div className="px-4 mt-4">
           {!hideNav ? (
-            <div className="flex flex-col overflow-hidden bg-slate-300 rounded-sm mx-auto p-2 gap-1 ">
+            <div className="flex flex-col overflow-hidden bg-slate-200 rounded-sm mx-auto p-2 gap-1 ">
               <div className="flex justify-around items-center">
-                <h3 className="font-bold text-[1.05rem]">08:30 AM</h3>
-                <h5 className="font-medium text-[.85rem]">Tue 20 Jan</h5>
+                <h3 className="font-bold text-[1rem]">08:30 AM</h3>
+                <h5 className="font-medium text-[.8rem]">Tue 20 Jan</h5>
               </div>
               <div className="flex justify-between px-[.8rem]">
                 <div className="flex items-center gap-1">
-                  <LanguageIcon sx={{ fontSize: "1.2rem" }} />
-                  <h4 className="font-medium text-[.85rem]">UTC: +5 hours</h4>
+                  <LanguageIcon sx={{ fontSize: "1.1rem" }} />
+                  <h4 className="font-medium text-[.8rem]">UTC: +5 hours</h4>
                 </div>
                 <KeyboardArrowDownIcon />
               </div>
@@ -122,12 +122,12 @@ const SideBar = () => {
 
       {/* DASHBOARD */}
       <div className="p-2">
-        <div className="flex mb-4 mx-auto p-4 hover:bg-slate-300 rounded-sm cursor-pointer justify-between">
+        <div className="flex mb-4 mx-auto p-4 hover:bg-slate-200 rounded-sm cursor-pointer justify-between">
           <div className="flex gap-4 items-center">
-            <WidgetsIcon sx={{ fontSize: "1.2rem" }} />
-            <h3 className="text-[.95rem]">Dashboard</h3>
+            <WidgetsIcon sx={{ fontSize: "1.1rem" }} />
+            <h3 className="text-[.85rem]">Dashboard</h3>
           </div>
-          <LaunchIcon sx={{ fontSize: "1.2rem" }} />
+          <LaunchIcon sx={{ fontSize: "1.1rem" }} />
         </div>
         {/* ADMIN-HELP CENTER */}
         <div className="flex my-2 cursor-pointer justify-between">
@@ -147,7 +147,7 @@ const SideBar = () => {
             sx={{ fontSize: "1.2rem" }}
           />
         </div>
-        <div className="flex my-2 mb-4 cursor-pointer justify-between">
+        <div className="flex my-3 mb-4 cursor-pointer justify-between">
           <div className="flex gap-1 items-center">
             <div className="px-3">
               <InfoIcon />

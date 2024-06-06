@@ -43,7 +43,7 @@ const Header = () => {
             <h3 className="text-[.88rem] whitespace-nowrap">Add filter</h3>
           </div>
           <div className="flex items-center gap-4">
-            <SearchBar />
+            <SearchBar placeHolder={'Search client'} />
             <ul className="flex gap-4">
               <li className="active:scale-[.92] duration-300 ease-linear cursor-pointer">
                 <RepeatIcon />
