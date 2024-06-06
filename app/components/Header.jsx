@@ -62,7 +62,8 @@ const Header = () => {
         </div>
       </div>
       <div className="w-full flex justify-between px-4">
-
+        {/* FILTER BOX */}
+        <FilterBox filterBox={filterBox} setFilterBox={setFilterBox} />
         {/* TABLE COLUMN EDIT BOX   */}
         <EditModal
           editModalOpen={editModalOpen}
