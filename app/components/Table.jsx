@@ -64,26 +64,26 @@ const Table = ({ tableData }) => {
             <th>
               <input type="checkbox" disabled />
             </th>
-            <td className="font-light text-[.65rem] text-black p-3 border">
+            <td className="font-medium text-[.65rem] text-black p-3 border">
               {data.createOn}
             </td>
-            <td className="font-light text-[.65rem] text-black p-3 border">
+            <td className="font-medium text-[.65rem] text-black p-3 border">
               {data.payer}
             </td>
-            <td className="font-light text-[.65rem] text-black p-3 border">
+            <td className="font-medium text-[.65rem] text-black p-3 border">
               {/* //Status component for change color according to colors */}
               <DataStatus status={data.status} />
             </td>
-            <td className="font-light text-[.65rem] text-black p-3 border">
+            <td className="font-medium text-[.65rem] text-black p-3 border">
               {data.email}
             </td>
-            <td className="font-light text-[.65rem] text-black p-3 border">
+            <td className="font-medium text-[.65rem] text-black p-3 border">
               {data.payerPhone}
             </td>
-            <td className="font-light text-[.65rem] text-black p-3 border">
+            <td className="font-medium text-[.65rem] text-black p-3 border">
               {data.services}
             </td>
-            <td className="font-light text-[.65rem] text-black p-3 border">
+            <td className="font-medium text-[.65rem] text-black p-3 border">
               {data.Scheduled}
             </td>
           </tr>

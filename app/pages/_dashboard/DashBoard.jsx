@@ -29,6 +29,15 @@ const DashBoard = () => {
       Scheduled: "Wed, 28 Dec 2023 7:42 PM",
     },
     {
+      createOn: "Sat, 06 Jan 2024 :42 PM",
+      payer: "Hannibal Smith",
+      status: "Active",
+      email: "hannibalsmith@gmail.com",
+      payerPhone: "+91 +966578632254",
+      services: "Arobics Session",
+      Scheduled: "Wed, 28 Dec 2023 7:42 PM",
+    },
+    {
       createOn: "Sat, 06 Jan 2024 4:42 PM",
       payer: "Michael Knight",
       status: "Inactive",
