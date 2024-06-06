@@ -11,7 +11,7 @@ const Table = ({ tableData }) => {
       <thead>
         <tr>
           <th className="bg-slate-200 px-2">
-            <input type="radio" disabled />
+            <input type="checkbox" disabled />
           </th>
           <th className="font-light whitespace-nowrap min-w-[8rem] h-auto text-gray-700 bg-slate-200 text-[.75rem] p-2 border">
             <div className="flex items-center space-x-1">
@@ -61,7 +61,7 @@ const Table = ({ tableData }) => {
         {tableData.map((data, index) => (
           <tr key={index} className="border">
             <th>
-              <input type="radio" disabled />
+              <input type="checkbox" disabled />
             </th>
             <td className="font-light text-[.65rem] p-3 border">
               {data.createOn}
