@@ -10,7 +10,7 @@ import FilterBox from "./FilterBox";
 
 const Header = () => {
   const [editModalOpen, setEditModalOpen] = useState(false);
-  const [filterBox, setFilterBox] = useState(true);
+  const [filterBox, setFilterBox] = useState(false);
 
   return (
     <div className="w-full h-auto block relative">

@@ -41,10 +41,16 @@ const EditModal = ({ editModalOpen, setEditModalOpen }) => {
         ))}
       </div>
       <div className="flex justify-between px-2">
-        <button className="text-[.8rem] p-2 border cursor-pointer active:scale-[.95] duration-300 ease-in-out">
+        <button
+          onClick={() => setEditModalOpen(false)}
+          className="text-[.8rem] p-2 border cursor-pointer active:scale-[.95] duration-300 ease-in-out"
+        >
           Reset to Default
         </button>
-        <button className="text-[.8rem] p-2 border bg-[black] text-white w-24 rounded-sm cursor-pointer active:scale-[.95] duration-300 ease-in-out ">
+        <button
+          onClick={() => setEditModalOpen(false)}
+          className="text-[.8rem] p-2 border bg-[black] text-white w-24 rounded-sm cursor-pointer active:scale-[.95] duration-300 ease-in-out "
+        >
           Apply
         </button>
       </div>

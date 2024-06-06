@@ -23,7 +23,7 @@ const Date = () => {
           <p className="text-[.85rem] mb-3 font-medium">From</p>
           <div className="relative">
             <input
-              className="p-2 rounded-md outline-none border date-input"
+              className="p-2 rounded-md outline-none border flex-shrink date-input"
               type="date"
             />
             <span className="placeholder absolute top-2 left-2 text-gray-600 text-[.85rem]">
@@ -35,7 +35,7 @@ const Date = () => {
           <p className="text-[.85rem] mb-3 font-medium">To</p>
           <div className="relative">
             <input
-              className="p-2 rounded-md outline-none border date-input"
+              className="p-2 rounded-md outline-none border flex-shrink date-input"
               type="date"
             />
             <span className="placeholder absolute top-2 left-2 text-gray-600 text-[.85rem]">

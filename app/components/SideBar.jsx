@@ -51,7 +51,7 @@ const SideBar = () => {
 
   return (
     <main
-      className={`flex flex-col flex-shrink-0 p-1 border-r justify-between duration-500 ease-in-out h-full ${
+      className={`flex flex-col flex-shrink-0 p-1 border transition-transform justify-between duration-500 ease-in-out h-full ${
         hideNav ? "w-[3.3rem]" : "w-[270px]"
       } overflow-hidden bg-slate-100`}
     >

@@ -1,9 +1,14 @@
+"use client";
 import Header from "@/app/components/Header";
+import Loading from "@/app/components/Loading";
 import SideBar from "@/app/components/SideBar";
 import Table from "@/app/components/Table";
 import TableFooter from "@/app/components/TableFooter";
+import { useEffect, useState } from "react";
 
 const DashBoard = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   const tableData = [
     {
       createOn: "Sun, 07 Jan 2024 2:42 PM",
@@ -70,6 +75,18 @@ const DashBoard = () => {
     },
   ];
 
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timeoutId);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <div className="h-screen w-full flex">
@@ -80,7 +97,7 @@ const DashBoard = () => {
             <div className="w-full h-auto  overflow-x-auto">
               <Table tableData={tableData} />
             </div>
-              <TableFooter />
+            <TableFooter />
           </div>
         </div>
       </div>

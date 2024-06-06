@@ -63,10 +63,16 @@ const FilterBox = ({ filterBox, setFilterBox }) => {
       </div>
       <div className="flex justify-end w-full h-[13%] px-2">
         <div className="flex items-center gap-2">
-          <button className="text-[.8rem] p-2 border cursor-pointer active:scale-[.95] duration-300 ease-in-out">
+          <button
+            onClick={() => setFilterBox(false)}
+            className="text-[.8rem] p-2 border cursor-pointer active:scale-[.95] duration-300 ease-in-out"
+          >
             Reset to Default
           </button>
-          <button className="text-[.8rem] p-2 border bg-[black] text-white w-24 rounded-sm cursor-pointer active:scale-[.95] duration-300 ease-in-out ">
+          <button
+            onClick={() => setFilterBox(false)}
+            className="text-[.8rem] p-2 border bg-[black] text-white w-24 rounded-sm cursor-pointer active:scale-[.95] duration-300 ease-in-out "
+          >
             Apply
           </button>
         </div>
