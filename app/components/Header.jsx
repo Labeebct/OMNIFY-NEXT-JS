@@ -18,7 +18,7 @@ const Header = ({
   //State for controlling the table column edit modal
   const [editModalOpen, setEditModalOpen] = useState(false);
   //State for controlling the filter box
-  const [filterBox, setFilterBox] = useState(true);
+  const [filterBox, setFilterBox] = useState(false);
 
   return (
     <div className="w-full h-auto block relative">
