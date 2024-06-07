@@ -8,11 +8,17 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import EditModal from "./EditModal";
 import FilterBox from "./FilterBox";
 
-const Header = ({ showData, setShowData }) => {
+const Header = ({
+  showData,
+  setShowData,
+  tableData,
+  setFilteredValue,
+  filteredValue,
+}) => {
   //State for controlling the table column edit modal
   const [editModalOpen, setEditModalOpen] = useState(false);
   //State for controlling the filter box
-  const [filterBox, setFilterBox] = useState(false);
+  const [filterBox, setFilterBox] = useState(true);
 
   return (
     <div className="w-full h-auto block relative">
@@ -65,7 +71,13 @@ const Header = ({ showData, setShowData }) => {
       </div>
       <div className="w-full flex justify-between px-4">
         {/* FILTER BOX */}
-        <FilterBox filterBox={filterBox} setFilterBox={setFilterBox} />
+        <FilterBox
+          filteredValue={filteredValue}
+          setFilteredValue={setFilteredValue}
+          tableData={tableData}
+          filterBox={filterBox}
+          setFilterBox={setFilterBox}
+        />
         {/* TABLE COLUMN EDIT BOX   */}
         <EditModal
           showData={showData}

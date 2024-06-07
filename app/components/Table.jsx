@@ -12,9 +12,9 @@ const Table = ({ tableData, showData }) => {
     <table className="w-full h-auto border">
       <thead>
         <tr>
-          <th className="bg-slate-200 px-2 flex-grow-0">
-            <input type="checkbox" disabled />
-          </th>
+          <td className="bg-slate-200 w-4 px-2">
+            <input className="m-auto ml-[.06rem]" type="checkbox" disabled />
+          </td>
           {showData.CreatedOn && (
             <th className="font-light whitespace-nowrap min-w-[8rem] h-auto text-gray-700 bg-slate-200 text-[.75rem] p-2 border">
               <div className="flex items-center space-x-1">
@@ -77,42 +77,42 @@ const Table = ({ tableData, showData }) => {
         {/* //Mapping td datas */}
         {tableData.map((data, index) => (
           <tr key={data.id} className="border">
-            <th className="flex-grow-0">
-              <input type="checkbox" disabled />
-            </th>
+            <td className="m-auto">
+              <input type="checkbox" className="m-auto translate-x-2" disabled />
+            </td>
             {showData.CreatedOn && (
-              <td className="font-medium text-[.65rem] text-black p-3 border">
+              <td className="font-medium text-[.68rem] text-black p-3 border">
                 {data.createOn}
               </td>
             )}
             {showData.Payer && (
-              <td className="font-medium text-[.65rem] text-black p-3 border">
+              <td className="font-medium text-[.68rem] text-black p-3 border">
                 {data.payer}
               </td>
             )}
             {showData.Status && (
-              <td className="font-medium text-[.65rem] text-black p-3 border">
+              <td className="font-medium text-[.68rem] text-black p-3 border">
                 {/* //Status component for change color according to colors */}
                 <DataStatus status={data.status} />
               </td>
             )}
             {showData.Email && (
-              <td className="font-medium text-[.65rem] text-black p-3 border">
+              <td className="font-medium text-[.68rem] text-black p-3 border">
                 {data.email}
               </td>
             )}
             {showData.PayerPhone && (
-              <td className="font-medium text-[.65rem] text-black p-3 border">
+              <td className="font-medium text-[.68rem] text-black p-3 border">
                 {data.payerPhone}
               </td>
             )}
             {showData.Services && (
-              <td className="font-medium text-[.65rem] text-black p-3 border">
+              <td className="font-medium text-[.68rem] text-black p-3 border">
                 {data.services}
               </td>
             )}
             {showData.Scheduled && (
-              <td className="font-medium text-[.65rem] text-black p-3 border">
+              <td className="font-medium text-[.68rem] text-black p-3 border">
                 {data.Scheduled}
               </td>
             )}

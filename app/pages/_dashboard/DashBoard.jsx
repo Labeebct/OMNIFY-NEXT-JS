@@ -33,7 +33,7 @@ const DashBoard = () => {
     {
       id: 3,
       createOn: "Sat, 06 Jan 2024 :42 PM",
-      payer: "Hannibal Smith",
+      payer: "Labeeb Labio",
       status: "Active",
       email: "hannibalsmith@gmail.com",
       payerPhone: "+91 +966578632254",
@@ -43,7 +43,7 @@ const DashBoard = () => {
     {
       id: 4,
       createOn: "Sat, 06 Jan 2024 4:42 PM",
-      payer: "Michael Knight",
+      payer: "Jessica Darvis",
       status: "Inactive",
       email: "theodore@gmail.com",
       payerPhone: "+91 +466558441203",
@@ -53,7 +53,7 @@ const DashBoard = () => {
     {
       id: 5,
       createOn: "Tue, 07 Jan 2024 1:36 PM",
-      payer: "Theodore T.C. Calvin",
+      payer: "Ramees Rio",
       status: "Lead",
       email: "smith@gmail.com",
       payerPhone: "+91 +346558446722",
@@ -63,7 +63,7 @@ const DashBoard = () => {
     {
       id: 6,
       createOn: "Sat, 06 Jan 2024 :42 PM",
-      payer: "Hannibal Smith",
+      payer: "Joyet Joy",
       status: "Active",
       email: "hannibalsmith@gmail.com",
       payerPhone: "+91 +966578632254",
@@ -73,7 +73,7 @@ const DashBoard = () => {
     {
       id: 7,
       createOn: "Sun, 07 Jan 2024 2:42 PM",
-      payer: "Theodore T.C. Calvin",
+      payer: "Althaf shaik",
       status: "Lead",
       email: "theodore@gmail.com",
       payerPhone: "+91 +966558441503",
@@ -83,7 +83,7 @@ const DashBoard = () => {
     {
       id: 8,
       createOn: "Tue, 07 Jan 2024 1:36 PM",
-      payer: "Theodore T.C. Calvin",
+      payer: "Waris leo",
       status: "Lead",
       email: "smith@gmail.com",
       payerPhone: "+91 +346558446722",
@@ -91,6 +91,8 @@ const DashBoard = () => {
       Scheduled: "Thu, 04 Jan 2024 2:42 PM",
     },
   ];
+
+  const [filteredValue, setFilteredValue] = useState(tableData);
 
   const [showData, setShowData] = useState({
     CreatedOn: true,
@@ -110,19 +112,25 @@ const DashBoard = () => {
     return () => clearTimeout(timeoutId);
   }, []);
 
-    if (isLoading) {
-      return <Loading />;
-    }
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <>
       <div className="h-screen w-full flex">
         <SideBar />
         <div className="h-auto w-[calc(100vw-3.3rem)] overflow-y-auto">
-          <Header showData={showData} setShowData={setShowData} />
+          <Header
+            showData={showData}
+            setShowData={setShowData}
+            filteredValue={filteredValue}
+            setFilteredValue={setFilteredValue}
+            tableData={tableData}
+          />
           <div className="w-full p-4 h-auto">
             <div className="w-full h-auto  overflow-x-auto">
-              <Table showData={showData}  tableData={tableData} />
+              <Table showData={showData} tableData={filteredValue} />
             </div>
             <TableFooter />
           </div>
