@@ -8,7 +8,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import EditModal from "./EditModal";
 import FilterBox from "./FilterBox";
 
-const Header = () => {
+const Header = ({ showData, setShowData }) => {
   //State for controlling the table column edit modal
   const [editModalOpen, setEditModalOpen] = useState(false);
   //State for controlling the filter box
@@ -68,6 +68,8 @@ const Header = () => {
         <FilterBox filterBox={filterBox} setFilterBox={setFilterBox} />
         {/* TABLE COLUMN EDIT BOX   */}
         <EditModal
+          showData={showData}
+          setShowData={setShowData}
           editModalOpen={editModalOpen}
           setEditModalOpen={setEditModalOpen}
         />

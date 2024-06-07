@@ -4,7 +4,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const TableFooter = () => {
   return (
-    <div className="flex justify-between mt-2">
+    <div className="flex justify-between mt-3">
       {/* FOOTER LEFT */}
       <div className="flex flex-wrap gap-3">
         <div className="flex items-center gap-1 min-w-[100px]">

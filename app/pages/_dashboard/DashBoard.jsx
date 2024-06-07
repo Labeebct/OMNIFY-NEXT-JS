@@ -11,6 +11,7 @@ const DashBoard = () => {
 
   const tableData = [
     {
+      id: 1,
       createOn: "Sun, 07 Jan 2024 2:42 PM",
       payer: "Theodore T.C. Calvin",
       status: "Lead",
@@ -20,6 +21,7 @@ const DashBoard = () => {
       Scheduled: "Sun, 07 Jan 2024 7:42 PM",
     },
     {
+      id: 2,
       createOn: "Sat, 06 Jan 2024 :42 PM",
       payer: "Hannibal Smith",
       status: "Active",
@@ -29,6 +31,7 @@ const DashBoard = () => {
       Scheduled: "Wed, 28 Dec 2023 7:42 PM",
     },
     {
+      id: 3,
       createOn: "Sat, 06 Jan 2024 :42 PM",
       payer: "Hannibal Smith",
       status: "Active",
@@ -38,6 +41,7 @@ const DashBoard = () => {
       Scheduled: "Wed, 28 Dec 2023 7:42 PM",
     },
     {
+      id: 4,
       createOn: "Sat, 06 Jan 2024 4:42 PM",
       payer: "Michael Knight",
       status: "Inactive",
@@ -47,6 +51,7 @@ const DashBoard = () => {
       Scheduled: "Sun, 07 Jan 2024 7:42 PM",
     },
     {
+      id: 5,
       createOn: "Tue, 07 Jan 2024 1:36 PM",
       payer: "Theodore T.C. Calvin",
       status: "Lead",
@@ -56,6 +61,7 @@ const DashBoard = () => {
       Scheduled: "Thu, 04 Jan 2024 2:42 PM",
     },
     {
+      id: 6,
       createOn: "Sat, 06 Jan 2024 :42 PM",
       payer: "Hannibal Smith",
       status: "Active",
@@ -65,6 +71,7 @@ const DashBoard = () => {
       Scheduled: "Wed, 28 Dec 2023 7:42 PM",
     },
     {
+      id: 7,
       createOn: "Sun, 07 Jan 2024 2:42 PM",
       payer: "Theodore T.C. Calvin",
       status: "Lead",
@@ -74,6 +81,7 @@ const DashBoard = () => {
       Scheduled: "Sun, 07 Jan 2024 7:42 PM",
     },
     {
+      id: 8,
       createOn: "Tue, 07 Jan 2024 1:36 PM",
       payer: "Theodore T.C. Calvin",
       status: "Lead",
@@ -84,29 +92,39 @@ const DashBoard = () => {
     },
   ];
 
+  const [showData, setShowData] = useState({
+    CreatedOn: true,
+    Payer: true,
+    Status: true,
+    Email: true,
+    PayerPhone: true,
+    Services: true,
+    Scheduled: true,
+  });
+
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
     }, 2500);
 
     return () => clearTimeout(timeoutId);
-  }, []);     
+  }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  }
+    if (isLoading) {
+      return <Loading />;
+    }
 
   return (
     <>
       <div className="h-screen w-full flex">
         <SideBar />
         <div className="h-auto w-[calc(100vw-3.3rem)] overflow-y-auto">
-          <Header />
+          <Header showData={showData} setShowData={setShowData} />
           <div className="w-full p-4 h-auto">
             <div className="w-full h-auto  overflow-x-auto">
-              <Table tableData={tableData} />
+              <Table showData={showData}  tableData={tableData} />
             </div>
-            <TableFooter />   
+            <TableFooter />
           </div>
         </div>
       </div>
